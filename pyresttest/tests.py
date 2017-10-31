@@ -422,11 +422,10 @@ class Test(object):
             u'auth_username': [coerce_string_to_ascii],
             u'auth_password': [coerce_string_to_ascii],
             u'method': [coerce_http_method], # HTTP METHOD
-            u'delay': [lambda x: int(x)], # Delay before running
+            u'delay': [lambda x: float(x)], # Delay before running
             u'group': [coerce_to_string], # Test group name
             u'name': [coerce_to_string],  # Test name
             u'expected_status': [coerce_list_of_ints],
-            u'delay': [lambda x: int(x)],
             u'stop_on_failure': [safe_to_bool],
 
             # Templated / special handling

@@ -347,7 +347,7 @@ def run_test(mytest, test_config=TestConfig(), context=None, curl_handle=None, *
         raw_input("Press ENTER when ready (%d): " % (mytest.delay))
 
     if mytest.delay > 0:
-        print("Delaying for %ds" % mytest.delay)
+        print("Delaying for %.1fs" % mytest.delay)
         time.sleep(mytest.delay)
 
     try:
